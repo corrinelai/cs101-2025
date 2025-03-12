@@ -1,0 +1,25 @@
+#include <stdio.h>
+
+int main() {
+    char a[] = "AABBBCCCCddd"; // 預設字串
+    int i = 0;
+
+    while (a[i] != '\0') {
+        char current = a[i];
+        int count = 1;
+
+        // 計算當前字元連續出現的次數（最多 9 次）
+        while (a[i + 1] == current && count < 9) {
+            count++;
+            i++;
+        }
+
+        // 輸出壓縮結果
+        printf("%c%d", current, count);
+        
+        i++;
+    }
+    
+    printf("\n");
+    return 0;
+}
