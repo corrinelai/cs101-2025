@@ -1,0 +1,17 @@
+#include <stdio.h>
+#include <string.h>
+
+int main() {
+    char a[] = "Hello"; // 原始字串
+    int len = strlen(a); // 取得字串長度
+
+    // 交換前後字元
+    for (int i = 0; i < len / 2; i++) {
+        char temp = a[i];
+        a[i] = a[len - 1 - i];
+        a[len - 1 - i] = temp;
+    }
+
+    printf("%s\n", a); // 輸出反轉後的結果
+    return 0;
+}
