@@ -1,0 +1,10 @@
+#include <stdio.h>
+#include <stdlib.h>
+
+int main() {
+    char a[] = "10001111"; // 預設的 8-bit 二進位字串
+    int decimal_value = strtol(a, NULL, 2); // 轉換成十進位
+    printf("%X\n", decimal_value); // 以 16 進位格式輸出
+
+    return 0;
+}
