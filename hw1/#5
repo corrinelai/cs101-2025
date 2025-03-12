@@ -1,0 +1,27 @@
+#include <stdio.h>
+
+// 印出前導空白，使數字置中
+void print_sp(int i, int n) {
+    for (int j = 0; j < n - i; j++) {
+        printf(" ");
+    }
+}
+
+// 印出對應數字，數量與數字相同
+void print_num(int n) {
+    for (int j = 0; j < n; j++) {
+        printf("%d ", n);  // 印出數字並加入空格
+    }
+    printf("\n");
+}
+
+int main() {
+    int rows = 6;  // 設定金字塔高度
+
+    for (int i = 1; i <= rows; i++) {
+        print_sp(i, rows);  // 先印前導空白，使數字對齊
+        print_num(i);       // 再印數字，每行數量與數字相同
+    }
+
+    return 0;
+}
